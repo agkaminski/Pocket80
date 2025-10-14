@@ -431,6 +431,10 @@
     [
       "c71604a3-048b-466d-bf76-26c5a2d4366c",
       "SIO"
+    ],
+    [
+      "fa52c846-c2c4-4e2a-b4b1-704188f66510",
+      "Keyboard"
     ]
   ],
   "text_variables": {}

@@ -635,6 +635,78 @@
 			)
 		)
 	)
+	(sheet
+		(at 219.71 40.64)
+		(size 12.7 11.43)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fa52c846-c2c4-4e2a-b4b1-704188f66510")
+		(property "Sheetname" "Keyboard"
+			(at 219.71 39.9284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "keyboard.kicad_sch"
+			(at 219.71 52.6546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "A[3..0]" input
+			(at 219.71 43.18 180)
+			(uuid "391504f3-e585-4e1e-a25b-266df4cbc050")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "D[5..0]" input
+			(at 219.71 45.72 180)
+			(uuid "294c2d0c-a38b-481d-aeee-025b28065803")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{KEYBOARD}" input
+			(at 219.71 49.53 180)
+			(uuid "ac4bbf91-415e-4e9f-bd98-27b7db031bf0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "pocket80"
+				(path "/328c075d-c706-4d2d-bd37-a88a0c604482"
+					(page "7")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
