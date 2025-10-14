@@ -737,7 +737,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_DIP:DIP-28_W15.24mm"
+			(property "Footprint" "Package_LCC:PLCC-32_11.4x14.0mm_P1.27mm"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1029,6 +1029,24 @@
 					)
 				)
 				(pin input line
+					(at -10.16 -13.97 0)
+					(length 2.54)
+					(name "VPP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
 					(at -10.16 -17.78 0)
 					(length 2.54)
 					(name "~{WE}"
@@ -1075,25 +1093,6 @@
 						)
 					)
 					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -7.62 -12.7 0)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4354,6 +4353,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VCC")
+		(at 121.92 71.12 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a4045fca-98cb-4af8-8ca4-cfda33186611")
+		(property "Reference" "#PWR054"
+			(at 125.73 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 118.11 71.1199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.92 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 121.92 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a526457d-e794-43ab-bd6f-e119fd7545df")
+		)
+		(instances
+			(project "pocket80"
+				(path "/328c075d-c706-4d2d-bd37-a88a0c604482/6fedc853-a726-478a-9af0-d8a49315d8a8"
+					(reference "#PWR054")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "KM28C64A_1")
 		(lib_id "Memory_EEPROM:KM28C64A")
 		(at 132.08 57.15 0)
@@ -4478,7 +4544,7 @@
 		(pin "13"
 			(uuid "eaf8ec7d-58b9-493b-811a-6b97f09b6e67")
 		)
-		(pin "1"
+		(pin "2"
 			(uuid "fb56374f-1626-451f-a36e-3e1642ab49f8")
 		)
 		(pin "24"
