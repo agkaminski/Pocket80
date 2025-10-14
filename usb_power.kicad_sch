@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "babb40a3-2cfc-4bcf-b009-eeeff676eb9e")
 	(paper "A4")
+	(title_block
+		(title "USB and power management")
+		(date "2025-10-14")
+		(rev "A")
+		(company "A.K.")
+	)
 	(lib_symbols
 		(symbol "Battery_Management:TP4056-42-ESOP8"
 			(exclude_from_sim no)

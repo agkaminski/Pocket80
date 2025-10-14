@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "328c075d-c706-4d2d-bd37-a88a0c604482")
 	(paper "A4")
+	(title_block
+		(date "2025-10-14")
+		(rev "A")
+		(company "A.K.")
+	)
 	(lib_symbols)
 	(sheet
 		(at 162.56 78.74)
@@ -383,7 +388,7 @@
 	)
 	(sheet
 		(at 25.4 45.72)
-		(size 33.02 24.13)
+		(size 12.7 7.62)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -407,12 +412,32 @@
 			)
 		)
 		(property "Sheetfile" "usb_power.kicad_sch"
-			(at 25.4 70.4346 0)
+			(at 25.4 53.9246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "RX" input
+			(at 38.1 48.26 0)
+			(uuid "ca7f1aaa-0cac-4a97-8864-ac31e9d05d36")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "TX" output
+			(at 38.1 50.8 0)
+			(uuid "07448dd8-4d44-46c9-bc7c-160129bd4562")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances

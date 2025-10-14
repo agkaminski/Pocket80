@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "7656352f-939b-4445-a902-cedc8f7bbe61")
 	(paper "A4")
+	(title_block
+		(title "CPU, basics and glue logic")
+		(date "2025-10-14")
+		(rev "A")
+		(company "A.K.")
+	)
 	(lib_symbols
 		(symbol "74xx:74HC00"
 			(pin_names

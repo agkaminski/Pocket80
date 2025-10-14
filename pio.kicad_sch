@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "ad0fc438-b5b7-4dbd-929c-1c1ba5e91972")
 	(paper "A4")
+	(title_block
+		(title "Z80 PIO")
+		(date "2025-10-14")
+		(rev "A")
+		(company "A.K.")
+	)
 	(lib_symbols
 		(symbol "Zilog_Z80_Peripherals:PIO-PLCC-44"
 			(exclude_from_sim no)

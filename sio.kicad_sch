@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "d0a8db8b-80e2-4600-a01b-ceca06069b40")
 	(paper "A5")
+	(title_block
+		(title "Z80 SIO")
+		(date "2025-10-14")
+		(rev "A")
+		(company "A.K.")
+	)
 	(lib_symbols
 		(symbol "Zilog_Z80_Peripherals:SIO3-PLCC-44"
 			(pin_names

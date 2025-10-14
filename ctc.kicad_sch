@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "392e0c8d-2df9-415e-a709-ebbb5c1ca866")
 	(paper "A4")
+	(title_block
+		(title "Z80 CTC")
+		(date "2025-10-14")
+		(rev "A")
+		(company "A.K.")
+	)
 	(lib_symbols
 		(symbol "Zilog_Z80_Peripherals:CTC-PLCC-44"
 			(pin_names

@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "50e7b4f2-13d0-445a-87eb-e8fd988c54c2")
 	(paper "A5")
+	(title_block
+		(title "Memory")
+		(date "2025-10-14")
+		(rev "A")
+		(company "A.K.")
+	)
 	(lib_symbols
 		(symbol "8bits:62256"
 			(pin_names

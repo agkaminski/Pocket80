@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "b3df64cf-48a5-4812-b0de-78038de94213")
 	(paper "A4")
+	(title_block
+		(title "Matrix keyboard")
+		(date "2025-10-14")
+		(rev "A")
+		(company "A.K.")
+	)
 	(lib_symbols
 		(symbol "74xx:74HC244"
 			(exclude_from_sim no)
