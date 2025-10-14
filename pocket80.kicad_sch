@@ -382,6 +382,48 @@
 		)
 	)
 	(sheet
+		(at 25.4 45.72)
+		(size 33.02 24.13)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c1e7a431-6e5f-4fa2-b435-dab397db0168")
+		(property "Sheetname" "USB and power"
+			(at 25.4 45.0084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "usb_power.kicad_sch"
+			(at 25.4 70.4346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pocket80"
+				(path "/328c075d-c706-4d2d-bd37-a88a0c604482"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 157.48 31.75)
 		(size 17.78 29.21)
 		(exclude_from_sim no)
