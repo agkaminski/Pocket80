@@ -859,7 +859,7 @@
 	)
 	(sheet
 		(at 222.25 102.87)
-		(size 15.24 29.21)
+		(size 15.24 31.75)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -883,7 +883,7 @@
 			)
 		)
 		(property "Sheetfile" "ctc.kicad_sch"
-			(at 222.25 132.6646 0)
+			(at 222.25 135.2046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -922,7 +922,7 @@
 			)
 		)
 		(pin "IEI" input
-			(at 222.25 129.54 180)
+			(at 222.25 132.08 180)
 			(uuid "951e8016-fc65-4c78-9b85-e9b3673f1aca")
 			(effects
 				(font
@@ -932,18 +932,8 @@
 			)
 		)
 		(pin "IEO" output
-			(at 237.49 129.54 0)
+			(at 237.49 132.08 0)
 			(uuid "dbdb2a52-90d8-4b15-b3f2-fbe4e5274f11")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "TO2" output
-			(at 237.49 105.41 0)
-			(uuid "ce918d8e-4d79-4be3-80f6-020befa53744")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -962,7 +952,7 @@
 			)
 		)
 		(pin "~{INT}" output
-			(at 237.49 127 0)
+			(at 237.49 129.54 0)
 			(uuid "d4b81494-0b1c-4499-9d63-5de72ee0284c")
 			(effects
 				(font
@@ -1004,6 +994,36 @@
 		(pin "~{RST}" input
 			(at 222.25 114.3 180)
 			(uuid "c989c63c-c634-4ffa-941f-035d3aac2e93")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "TO0" output
+			(at 237.49 105.41 0)
+			(uuid "00425643-1096-4e0c-9297-4122bb50f068")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "TO1" output
+			(at 237.49 107.95 0)
+			(uuid "dc8c6c89-8bcc-49a5-8e75-2b328213f3f8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{SRST}" input
+			(at 222.25 128.27 180)
+			(uuid "960704a8-7acf-4c5a-a13c-5d00579c6e49")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1084,7 +1104,7 @@
 			)
 		)
 		(pin "~{CTC}" output
-			(at 111.76 83.82 0)
+			(at 111.76 81.28 0)
 			(uuid "5d6a2510-eb35-4542-9ad4-c7c6572cb7e6")
 			(effects
 				(font
@@ -1114,7 +1134,7 @@
 			)
 		)
 		(pin "~{KEY}" output
-			(at 111.76 91.44 0)
+			(at 111.76 88.9 0)
 			(uuid "4652bf54-68fd-47ad-af2a-75fe2bc16463")
 			(effects
 				(font
@@ -1134,7 +1154,7 @@
 			)
 		)
 		(pin "~{PIO}" output
-			(at 111.76 88.9 0)
+			(at 111.76 86.36 0)
 			(uuid "a0ecf22f-1e89-4a49-823f-ce027f9be7fb")
 			(effects
 				(font
@@ -1144,7 +1164,7 @@
 			)
 		)
 		(pin "~{RAM}" output
-			(at 111.76 77.47 0)
+			(at 111.76 74.93 0)
 			(uuid "a419f5f7-8a1e-46a6-9b1a-635bf53f19e9")
 			(effects
 				(font
@@ -1154,7 +1174,7 @@
 			)
 		)
 		(pin "~{RD}" output
-			(at 111.76 71.12 0)
+			(at 111.76 68.58 0)
 			(uuid "90751c18-0144-4db4-9949-6c9ff4d85304")
 			(effects
 				(font
@@ -1164,7 +1184,7 @@
 			)
 		)
 		(pin "~{ROM}" output
-			(at 111.76 80.01 0)
+			(at 111.76 77.47 0)
 			(uuid "98f42d03-1722-4a37-bd9a-a44ff06084a9")
 			(effects
 				(font
@@ -1174,7 +1194,7 @@
 			)
 		)
 		(pin "~{RST}" output
-			(at 111.76 67.31 0)
+			(at 111.76 64.77 0)
 			(uuid "1256cfc6-5d38-40a5-8f60-9fba5de2222c")
 			(effects
 				(font
@@ -1184,7 +1204,7 @@
 			)
 		)
 		(pin "~{SIO}" output
-			(at 111.76 86.36 0)
+			(at 111.76 83.82 0)
 			(uuid "316ce34a-d24d-4412-bb3a-3a0930a14b78")
 			(effects
 				(font
@@ -1194,38 +1214,8 @@
 			)
 		)
 		(pin "~{WR}" output
-			(at 111.76 73.66 0)
+			(at 111.76 71.12 0)
 			(uuid "3639be25-e6cb-4d58-989f-1d1433638f9f")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "~{DISP_0}" output
-			(at 111.76 93.98 0)
-			(uuid "02efa83c-9321-4b35-8432-0326f190ce19")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "~{DISP_1}" output
-			(at 111.76 96.52 0)
-			(uuid "b020ff64-7a0d-49fe-b98e-af7602dcad45")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "~{DISP_2}" output
-			(at 111.76 99.06 0)
-			(uuid "44bfacd7-a509-4838-9589-3545daad42af")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1243,9 +1233,39 @@
 				(justify right)
 			)
 		)
-		(pin "CLK{slash}2" output
-			(at 111.76 64.77 0)
-			(uuid "adc4b07e-21d0-44d4-842b-94e3730fc062")
+		(pin "~{SRST}" output
+			(at 111.76 91.44 0)
+			(uuid "f2a946e2-dd08-44a0-94ca-efaffbf149cc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{DISP1}" output
+			(at 111.76 93.98 0)
+			(uuid "b3a1d60c-b89a-4f89-8c9a-9fd02f9439f2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{DISP2}" output
+			(at 111.76 96.52 0)
+			(uuid "35bd659b-afe3-440b-baab-cec99f2f4f2a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{DISP3}" output
+			(at 111.76 99.06 0)
+			(uuid "8a2cca98-8300-4121-9a40-711b81d00dd3")
 			(effects
 				(font
 					(size 1.27 1.27)
