@@ -5,7 +5,8 @@
 	(uuid "e1b91340-ffdf-4b2d-be1e-c148e2b8a8ce")
 	(paper "A5")
 	(title_block
-		(date "2025-10-14")
+		(title "DL1414 display")
+		(date "2025-10-16")
 		(rev "A")
 		(company "A.K.")
 	)

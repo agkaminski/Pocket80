@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "CPU, basics and glue logic")
-		(date "2025-10-14")
+		(date "2025-10-16")
 		(rev "A")
 		(company "A.K.")
 	)

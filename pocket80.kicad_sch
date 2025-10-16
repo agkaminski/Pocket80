@@ -5,7 +5,7 @@
 	(uuid "328c075d-c706-4d2d-bd37-a88a0c604482")
 	(paper "A4")
 	(title_block
-		(date "2025-10-14")
+		(date "2025-10-16")
 		(rev "A")
 		(company "A.K.")
 	)
@@ -1648,8 +1648,8 @@
 		)
 	)
 	(sheet
-		(at 222.25 71.12)
-		(size 33.02 20.32)
+		(at 222.25 60.96)
+		(size 22.86 26.67)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -1664,7 +1664,7 @@
 		)
 		(uuid "d76b66db-4397-448e-8b25-0f2076d90ef2")
 		(property "Sheetname" "PIO"
-			(at 222.25 70.4084 0)
+			(at 222.25 60.2484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1673,12 +1673,152 @@
 			)
 		)
 		(property "Sheetfile" "pio.kicad_sch"
-			(at 222.25 92.0246 0)
+			(at 222.25 88.2146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "ARDY" output
+			(at 245.11 66.04 0)
+			(uuid "f8f54eeb-5227-43e0-bf85-84b41db9da1d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "A[1..0]" input
+			(at 222.25 63.5 180)
+			(uuid "3b966d79-cec5-4c93-b9a2-4a83352623d1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CLK" input
+			(at 222.25 69.85 180)
+			(uuid "3ca678eb-e108-41b3-b3c3-1d5bd32b4b83")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "D[7..0]" bidirectional
+			(at 222.25 66.04 180)
+			(uuid "afbef58d-b83c-455f-b2bd-9028cfe7263d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IEI" input
+			(at 222.25 85.09 180)
+			(uuid "09c5c2ed-eb1e-4707-b16c-b3bb39529b95")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IEO" output
+			(at 245.11 85.09 0)
+			(uuid "1a9c80fa-9a19-4bff-946d-154e66a0ab7f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PORTA[7..0]" bidirectional
+			(at 245.11 63.5 0)
+			(uuid "3a7b9823-4581-4885-84d8-7849b373555f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PORTB[1..0]" bidirectional
+			(at 245.11 72.39 0)
+			(uuid "2791a835-4792-41fd-9080-03b8062b0fee")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{ASTB}" input
+			(at 245.11 68.58 0)
+			(uuid "d3b11fa1-8c1e-4a5e-a1fa-3e411fa19118")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{INT}" output
+			(at 245.11 82.55 0)
+			(uuid "be85325d-8553-4496-b35a-4aa0fab3fbd7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{IOREQ}" input
+			(at 222.25 76.2 180)
+			(uuid "663f9901-1f2b-4877-9593-dc92c1ef9bf8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{M1}" input
+			(at 222.25 78.74 180)
+			(uuid "bf08c924-dab4-43fe-958c-07b8a33317ae")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{PIO}" input
+			(at 222.25 81.28 180)
+			(uuid "5a7a77d1-7381-4076-a734-5074eaff9b06")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{RD}" input
+			(at 222.25 73.66 180)
+			(uuid "e3406838-d4e0-4188-9d11-b711e201bbab")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -1757,6 +1897,118 @@
 			(project "pocket80"
 				(path "/328c075d-c706-4d2d-bd37-a88a0c604482"
 					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 165.1 111.76)
+		(size 19.05 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fb9ef06d-1ada-4379-9cf2-126808c3d004")
+		(property "Sheetname" "Expansion"
+			(at 165.1 111.0484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "expansion.kicad_sch"
+			(at 165.1 126.3146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ARDY" input
+			(at 165.1 116.84 180)
+			(uuid "0240a9a7-24df-421f-84d3-faea426f4d01")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PORTA[7..0]" bidirectional
+			(at 165.1 114.3 180)
+			(uuid "6200d92d-60c7-4fb8-9e17-d73c2d8d07f1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PORTB[1..0]" bidirectional
+			(at 165.1 123.19 180)
+			(uuid "164029d5-33e7-49b3-aac6-ff8a664b903d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "RX" output
+			(at 184.15 114.3 0)
+			(uuid "7bedb69a-7240-4a12-ac76-a0f14d729edc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "TX" input
+			(at 184.15 116.84 0)
+			(uuid "5270b9ba-a90e-4116-9a7f-37d041a00f23")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "ZC{slash}TO0" input
+			(at 184.15 120.65 0)
+			(uuid "d6e08173-ca92-4aba-8f03-5321e66506e7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{ASTB}" output
+			(at 165.1 119.38 180)
+			(uuid "93fcb279-db0b-4b59-8678-bc6e67c7dd6c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "pocket80"
+				(path "/328c075d-c706-4d2d-bd37-a88a0c604482"
+					(page "10")
 				)
 			)
 		)
