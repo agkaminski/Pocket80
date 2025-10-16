@@ -3557,7 +3557,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_MicroMELF"
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
 			(at 143.51 109.22 0)
 			(effects
 				(font
@@ -4784,7 +4784,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_MicroMELF"
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
 			(at 152.4 106.68 0)
 			(effects
 				(font
