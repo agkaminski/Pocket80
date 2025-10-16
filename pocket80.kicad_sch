@@ -661,6 +661,48 @@
 		)
 	)
 	(sheet
+		(at 121.92 115.57)
+		(size 40.64 36.83)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ce7b6d6f-be80-484b-a165-8e00181c7461")
+		(property "Sheetname" "Display"
+			(at 121.92 114.8584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "display.kicad_sch"
+			(at 121.92 152.9846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pocket80"
+				(path "/328c075d-c706-4d2d-bd37-a88a0c604482"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 222.25 71.12)
 		(size 33.02 20.32)
 		(exclude_from_sim no)
