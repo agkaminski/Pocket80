@@ -10,7 +10,7 @@
 		(company "A.K.")
 	)
 	(lib_symbols
-		(symbol "Mechanical:MountingHole_Pad_MP"
+		(symbol "Mechanical:MountingHole_Pad"
 			(pin_numbers
 				(hide yes)
 			)
@@ -29,7 +29,7 @@
 					)
 				)
 			)
-			(property "Value" "MountingHole_Pad_MP"
+			(property "Value" "MountingHole_Pad"
 				(at 0 4.445 0)
 				(effects
 					(font
@@ -55,7 +55,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Mounting Hole with connection as pad named MP"
+			(property "Description" "Mounting Hole with connection"
 				(at 0 0 0)
 				(effects
 					(font
@@ -82,7 +82,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "MountingHole_Pad_MP_0_1"
+			(symbol "MountingHole_Pad_0_1"
 				(circle
 					(center 0 1.27)
 					(radius 1.27)
@@ -95,18 +95,18 @@
 					)
 				)
 			)
-			(symbol "MountingHole_Pad_MP_1_1"
+			(symbol "MountingHole_Pad_1_1"
 				(pin input line
 					(at 0 -2.54 90)
 					(length 2.54)
-					(name "MP"
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "MP"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2102,7 +2102,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole_Pad_MP")
+		(lib_id "Mechanical:MountingHole_Pad")
 		(at 228.6 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2112,7 +2112,7 @@
 		(fields_autoplaced yes)
 		(uuid "4cd9e41b-52cf-4b19-b9e6-ac7f9f0cfcae")
 		(property "Reference" "H1"
-			(at 231.14 78.7399 0)
+			(at 231.14 80.0099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2148,7 +2148,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Mounting Hole with connection as pad named MP"
+		(property "Description" "Mounting Hole with connection"
 			(at 228.6 81.28 0)
 			(effects
 				(font
@@ -2157,7 +2157,7 @@
 				(hide yes)
 			)
 		)
-		(pin "MP"
+		(pin "1"
 			(uuid "d69a2c0b-fed6-4a59-89c6-684c9b80bae0")
 		)
 		(instances
@@ -2236,7 +2236,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole_Pad_MP")
+		(lib_id "Mechanical:MountingHole_Pad")
 		(at 251.46 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2246,7 +2246,7 @@
 		(fields_autoplaced yes)
 		(uuid "887df166-0d01-41ca-8a48-117f179d38ba")
 		(property "Reference" "H4"
-			(at 254 78.7399 0)
+			(at 254 80.0099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2282,7 +2282,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Mounting Hole with connection as pad named MP"
+		(property "Description" "Mounting Hole with connection"
 			(at 251.46 81.28 0)
 			(effects
 				(font
@@ -2291,7 +2291,7 @@
 				(hide yes)
 			)
 		)
-		(pin "MP"
+		(pin "1"
 			(uuid "27d5e879-f463-418e-b574-09b65ced4d3d")
 		)
 		(instances
@@ -2304,7 +2304,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole_Pad_MP")
+		(lib_id "Mechanical:MountingHole_Pad")
 		(at 243.84 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2314,7 +2314,7 @@
 		(fields_autoplaced yes)
 		(uuid "8a5826da-132e-483f-9cc6-7b53d40ec086")
 		(property "Reference" "H3"
-			(at 246.38 78.7399 0)
+			(at 246.38 80.0099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2350,7 +2350,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Mounting Hole with connection as pad named MP"
+		(property "Description" "Mounting Hole with connection"
 			(at 243.84 81.28 0)
 			(effects
 				(font
@@ -2359,7 +2359,7 @@
 				(hide yes)
 			)
 		)
-		(pin "MP"
+		(pin "1"
 			(uuid "94b48e00-da71-4db6-8295-d276a63b7d65")
 		)
 		(instances
@@ -2504,7 +2504,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole_Pad_MP")
+		(lib_id "Mechanical:MountingHole_Pad")
 		(at 236.22 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2514,7 +2514,7 @@
 		(fields_autoplaced yes)
 		(uuid "b9d3c448-9c2b-4950-9aa1-f46e0bedc793")
 		(property "Reference" "H2"
-			(at 238.76 78.7399 0)
+			(at 238.76 80.0099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2550,7 +2550,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Mounting Hole with connection as pad named MP"
+		(property "Description" "Mounting Hole with connection"
 			(at 236.22 81.28 0)
 			(effects
 				(font
@@ -2559,7 +2559,7 @@
 				(hide yes)
 			)
 		)
-		(pin "MP"
+		(pin "1"
 			(uuid "d548c308-65e1-48c3-82b6-8a8f316c88f2")
 		)
 		(instances
