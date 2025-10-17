@@ -4903,7 +4903,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_MicroMELF"
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
 			(at 82.55 143.51 0)
 			(effects
 				(font
