@@ -3702,7 +3702,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PIO-PLCC-44"
+		(property "Value" "Z80 PIO"
 			(at 125.3333 60.96 0)
 			(effects
 				(font

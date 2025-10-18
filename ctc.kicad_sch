@@ -3725,7 +3725,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CTC-PLCC-44"
+		(property "Value" "Z80 CTC"
 			(at 61.8333 31.75 0)
 			(effects
 				(font

@@ -2489,7 +2489,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SIO3-PLCC-44"
+		(property "Value" "Z80 SIO3"
 			(at 102.4733 27.94 0)
 			(effects
 				(font
