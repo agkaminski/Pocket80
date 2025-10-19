@@ -19229,7 +19229,7 @@
 			(net 2 "GND")
 			(pinfunction "EPAD")
 			(pintype "passive")
-			(uuid "84964ca6-8ccb-494b-8bfb-753d95f18817")
+			(uuid "1dfbf1db-394b-490a-aa07-72aaa1bbfae4")
 		)
 		(pad "9" thru_hole circle
 			(at -0.7 1.2)
@@ -19241,7 +19241,7 @@
 			(net 2 "GND")
 			(pinfunction "EPAD")
 			(pintype "passive")
-			(uuid "84964ca6-8ccb-494b-8bfb-753d95f18817")
+			(uuid "2a215e22-4ac9-4596-8e95-146da03a970a")
 		)
 		(pad "9" smd rect
 			(at 0 0)
@@ -19252,7 +19252,7 @@
 			(pinfunction "EPAD")
 			(pintype "passive")
 			(zone_connect 2)
-			(uuid "84964ca6-8ccb-494b-8bfb-753d95f18817")
+			(uuid "a10d3c57-f146-4ee5-a22a-099470732dc8")
 		)
 		(pad "9" smd rect
 			(at 0 0)
@@ -19263,7 +19263,7 @@
 			(pinfunction "EPAD")
 			(pintype "passive")
 			(zone_connect 2)
-			(uuid "84964ca6-8ccb-494b-8bfb-753d95f18817")
+			(uuid "55c48e4b-5a1a-480d-b5de-42fbecbca3d1")
 		)
 		(pad "9" thru_hole circle
 			(at 0.7 -1.2)
@@ -19275,7 +19275,7 @@
 			(net 2 "GND")
 			(pinfunction "EPAD")
 			(pintype "passive")
-			(uuid "84964ca6-8ccb-494b-8bfb-753d95f18817")
+			(uuid "1bb41dc4-f05d-47c2-981c-df722ef55655")
 		)
 		(pad "9" thru_hole circle
 			(at 0.7 0)
@@ -19287,7 +19287,7 @@
 			(net 2 "GND")
 			(pinfunction "EPAD")
 			(pintype "passive")
-			(uuid "84964ca6-8ccb-494b-8bfb-753d95f18817")
+			(uuid "c8d58b7e-6922-4e8a-a8c8-d3a460fae7c1")
 		)
 		(pad "9" thru_hole circle
 			(at 0.7 1.2)
@@ -19299,7 +19299,7 @@
 			(net 2 "GND")
 			(pinfunction "EPAD")
 			(pintype "passive")
-			(uuid "84964ca6-8ccb-494b-8bfb-753d95f18817")
+			(uuid "791a2c96-11ee-4791-bceb-8890196b644c")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.wrl"
