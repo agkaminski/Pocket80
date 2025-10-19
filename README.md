@@ -43,3 +43,7 @@ Key features:
 | 0xA0  | 0xBF | Display 1 (leftmost) |
 | 0xC0  | 0xDF | Display 2            |
 | 0xE0  | 0xFF | Display 3            |
+
+## PCB visualisation
+
+<img src="img/pcb/top.png" width="45%"> <img src="img/pcb/bottom.png" width="45%">
