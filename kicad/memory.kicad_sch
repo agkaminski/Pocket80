@@ -6,8 +6,8 @@
 	(paper "A5")
 	(title_block
 		(title "Memory")
-		(date "2025-10-19")
-		(rev "A")
+		(date "2025-11-03")
+		(rev "B")
 		(company "A.K.")
 	)
 	(lib_symbols
