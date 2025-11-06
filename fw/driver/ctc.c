@@ -14,32 +14,32 @@ void ctc_control(uint8_t channel, struct ctc_control *control)
 {
 	uint8_t word = 1;
 
-	word |= (control.interrupt)                      ? (1 << 7) : 0;
-	word |= (control.mode == ctc_counter)            ? (1 << 6) : 0;
-	word |= (control.prescaler == ctc_prescaler_256) ? (1 << 5) : 0;
-	word |= (control.edge == ctc_edge_rising)        ? (1 << 4) : 0;
-	word |= (control.trigger == ctc_trigger_clk)     ? (1 << 3) : 0;
-	word |= (control.time.present)                   ? (1 << 2) : 0;
-	word |= (control.reset)                          ? (1 << 1) : 0;
+	word |= (control->interrupt)                      ? (1 << 7) : 0;
+	word |= (control->mode == ctc_counter)            ? (1 << 6) : 0;
+	word |= (control->prescaler == ctc_prescaler_256) ? (1 << 5) : 0;
+	word |= (control->edge == ctc_edge_rising)        ? (1 << 4) : 0;
+	word |= (control->trigger == ctc_trigger_clk)     ? (1 << 3) : 0;
+	word |= (control->time.present)                   ? (1 << 2) : 0;
+	word |= (control->reset)                          ? (1 << 1) : 0;
 
-	if (control.time.present) {
+	if (control->time.present) {
 		DI();
 		switch (channel) {
 			case 0:
 				CHAN0 = word;
-				CHAN0 = control.time.constant;
+				CHAN0 = control->time.constant;
 				break;
 			case 1:
 				CHAN1 = word;
-				CHAN1 = control.time.constant;
+				CHAN1 = control->time.constant;
 				break;
 			case 2:
 				CHAN2 = word;
-				CHAN2 = control.time.constant;
+				CHAN2 = control->time.constant;
 				break;
 			case 3:
 				CHAN3 = word;
-				CHAN3 = control.time.constant;
+				CHAN3 = control->time.constant;
 				break;
 		}
 		EI();
