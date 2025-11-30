@@ -23,7 +23,7 @@ void ctc_control(uint8_t channel, struct ctc_control *control)
 	word |= (control->reset)                          ? (1 << 1) : 0;
 
 	if (control->time.present) {
-		DI();
+//		DI();
 		switch (channel) {
 			case 0:
 				CHAN0 = word;
@@ -42,7 +42,7 @@ void ctc_control(uint8_t channel, struct ctc_control *control)
 				CHAN3 = control->time.constant;
 				break;
 		}
-		EI();
+//		EI();
 	}
 	else {
 		switch (channel) {

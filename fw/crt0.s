@@ -130,9 +130,6 @@ _dl1414_update:
 			nop                  ; 0xD2
 			out (0xE0), a        ; 0xD4
 			nop;ei                   ; 0xD5
-
-
-			halt
 			ret
 
 
