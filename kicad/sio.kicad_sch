@@ -6,7 +6,7 @@
 	(paper "A5")
 	(title_block
 		(title "Z80 SIO")
-		(date "2025-12-02")
+		(date "2025-12-04")
 		(rev "B")
 		(company "A.K.")
 	)
@@ -132,6 +132,130 @@
 				(pin passive line
 					(at 0 -3.81 90)
 					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
 					(name "~"
 						(effects
 							(font
@@ -1378,14 +1502,6 @@
 		(uuid "0270fb77-18b3-476a-935d-9bbf8c9a8b86")
 	)
 	(no_connect
-		(at 113.03 69.85)
-		(uuid "2eca4384-4b89-401b-ac06-92e7b0d39289")
-	)
-	(no_connect
-		(at 113.03 41.91)
-		(uuid "494af018-fa02-4f16-84d2-dff1190df706")
-	)
-	(no_connect
 		(at 113.03 44.45)
 		(uuid "854ef1fe-b4b7-4adc-a5b1-aa63736f6da0")
 	)
@@ -1755,6 +1871,16 @@
 		)
 		(uuid "757cafa3-a3ec-40b6-a935-628a7a707eb9")
 	)
+	(wire
+		(pts
+			(xy 140.97 69.85) (xy 140.97 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7da7d3da-3398-485d-928e-bf67ce0da989")
+	)
 	(bus
 		(pts
 			(xy 81.28 34.29) (xy 81.28 36.83)
@@ -1807,6 +1933,26 @@
 	)
 	(wire
 		(pts
+			(xy 113.03 69.85) (xy 140.97 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad732dd0-578c-4976-a2ca-6a021c807974")
+	)
+	(wire
+		(pts
+			(xy 113.03 41.91) (xy 132.08 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b16cc87e-8422-412f-820c-a8c5bbec5858")
+	)
+	(wire
+		(pts
 			(xy 115.57 34.29) (xy 115.57 39.37)
 		)
 		(stroke
@@ -1814,6 +1960,16 @@
 			(type default)
 		)
 		(uuid "b9231e37-5702-4a7b-a699-a0b6203ca126")
+	)
+	(wire
+		(pts
+			(xy 132.08 25.4) (xy 132.08 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "beeaec05-7a33-4566-94d3-b83fc1e5fd0b")
 	)
 	(wire
 		(pts
@@ -1867,6 +2023,16 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 25.4) (xy 140.97 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfc07b75-c5cb-4b2a-94c2-38952671931d")
+	)
+	(wire
+		(pts
 			(xy 116.84 90.17) (xy 116.84 83.82)
 		)
 		(stroke
@@ -1884,6 +2050,16 @@
 			(type default)
 		)
 		(uuid "e2652167-b759-4213-bcc5-e957ef888b0d")
+	)
+	(wire
+		(pts
+			(xy 132.08 41.91) (xy 132.08 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebf35bfb-eec4-4a1f-b2ba-f12a4adafa75")
 	)
 	(wire
 		(pts
@@ -2201,6 +2377,142 @@
 			(justify right)
 		)
 		(uuid "fb8553a2-fc12-49da-83b8-b0bed98e3639")
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 140.97 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0a4626b1-d52c-4e7d-afe0-365411d6cb89")
+		(property "Reference" "#PWR0153"
+			(at 140.97 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 140.97 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 140.97 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9c6b0c22-0658-4040-8a91-5b74eea05958")
+		)
+		(instances
+			(project "pocket80"
+				(path "/328c075d-c706-4d2d-bd37-a88a0c604482/c71604a3-048b-466d-bf76-26c5a2d4366c"
+					(reference "#PWR0153")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 132.08 35.56 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "35cfdc20-e0ec-411a-8c35-03e9eb1d9f7b")
+		(property "Reference" "R39"
+			(at 134.62 34.2899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K"
+			(at 134.62 36.8299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 133.858 35.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 132.08 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 132.08 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "091092d2-0c16-4d89-bb7e-f4e61fd0c878")
+		)
+		(pin "1"
+			(uuid "fd3945ac-e218-40a8-a2ce-844acb400f1d")
+		)
+		(instances
+			(project "pocket80"
+				(path "/328c075d-c706-4d2d-bd37-a88a0c604482/c71604a3-048b-466d-bf76-26c5a2d4366c"
+					(reference "R39")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2886,6 +3198,142 @@
 			(project "pocket80"
 				(path "/328c075d-c706-4d2d-bd37-a88a0c604482/c71604a3-048b-466d-bf76-26c5a2d4366c"
 					(reference "#PWR087")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 132.08 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ec3196de-a0e8-46a4-bac4-650b96be865e")
+		(property "Reference" "#PWR0152"
+			(at 132.08 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 132.08 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 132.08 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d36a640f-0d69-469e-8e92-09d0078793db")
+		)
+		(instances
+			(project "pocket80"
+				(path "/328c075d-c706-4d2d-bd37-a88a0c604482/c71604a3-048b-466d-bf76-26c5a2d4366c"
+					(reference "#PWR0152")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 140.97 35.56 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f00a101f-0967-470f-8c17-975be84fb677")
+		(property "Reference" "R40"
+			(at 143.51 34.2899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K"
+			(at 143.51 36.8299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 142.748 35.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 140.97 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "eaf3e222-8f0e-468c-a6bb-f20449e81f12")
+		)
+		(pin "1"
+			(uuid "f2172ab3-980a-49d7-a5d9-e5195396ffd9")
+		)
+		(instances
+			(project "pocket80"
+				(path "/328c075d-c706-4d2d-bd37-a88a0c604482/c71604a3-048b-466d-bf76-26c5a2d4366c"
+					(reference "R40")
 					(unit 1)
 				)
 			)
