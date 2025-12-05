@@ -1,5 +1,8 @@
 TARGET = monitor
 
+CC = $(shell if `which sdcc-sdcc > /dev/null 2>&1`; then echo "sdcc-sdcc"; else echo "sdcc"; fi)
+AS = $(shell if `which sdcc-sdasz80 > /dev/null 2>&1`; then echo "sdcc-sdasz80"; else echo "sdasz80"; fi)
+
 CPU = z80
 CODE = 0x0200
 DATA = 0x8000
@@ -23,17 +26,18 @@ ${TARGET}.bin: ${TARGET}.hex
 	du -b ${TARGET}.bin
 
 ${TARGET}.hex: ${OBJ}
-	sdcc -o ${TARGET}.hex ${CFLAGS} ${LDFLAGS} ${OBJ}
+	$(CC) -o ${TARGET}.hex ${CFLAGS} ${LDFLAGS} ${OBJ}
 
 %.rel: %.c
-	sdcc ${CFLAGS} -o "$@" -c "$<"
+	$(CC) ${CFLAGS} -o "$@" -c "$<"
 
 %.rel: %.s
-	sdasz80 -l -o -s "$<"
+	$(AS) -l -o -s "$<"
 
 install: ${TARGET}.bin
 	minipro -pAT28C256@PLCC32 -sw ${TARGET}.bin
 
 clean:
 	@rm -f ${TRASH}
+	@(cd driver && rm -f ${TRASH})
 
