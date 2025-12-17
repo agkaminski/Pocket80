@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "USB and power management")
-		(date "2025-12-04")
-		(rev "B")
+		(date "2025-12-17")
+		(rev "C")
 		(company "A.K.")
 	)
 	(lib_symbols
@@ -2642,8 +2642,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "SW"
-				(at 0 10.16 0)
+			(property "Reference" "SW25"
+				(at 0 13.97 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2651,14 +2651,14 @@
 				)
 			)
 			(property "Value" "SW_Push_DPDT"
-				(at 0 -10.16 0)
+				(at 0 11.43 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Button_Switch_THT:SW_CK_JS202011AQN_DPDT_Angled"
 				(at 0 5.08 0)
 				(effects
 					(font
@@ -2942,7 +2942,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2960,7 +2960,7 @@
 							)
 						)
 					)
-					(number "6"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
