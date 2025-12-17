@@ -12,9 +12,13 @@ CFLAGS = -m${CPU} -DVERSION='${GHASH}' -DDATE='${DATE}' \
   --opt-code-size --max-allocs-per-node 10000
 LDFLAGS = --code-loc ${CODE} --data-loc ${DATA} --no-std-crt0
 
-SRC = main.c
-SRC += driver/ctc.c driver/sio.c driver/dl1414.c
-OBJ = crt0.rel $(SRC:.c=.rel)
+SRC = crt0.s
+SRC += main.c
+SRC += driver/ctc.c driver/sio.c driver/dl1414.s
+
+OBJ = $(SRC:.c=.rel)
+OBJ := $(OBJ:.s=.rel)
+
 TRASH = *.bin *.lk *.map *.mem *.lst *.rel *.rst *.sym *.asm *.ihx *.noi *.hex
 
 .PHONY: clean install
