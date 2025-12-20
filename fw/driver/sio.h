@@ -7,7 +7,9 @@
 
 #include <stdint.h>
 
-void sio_tx(uint8_t byte);
+void sio_write(uint8_t channel, uint8_t byte);
+
+uint8_t sio_read(uint8_t channel);
 
 void sio_init(void);
 

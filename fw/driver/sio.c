@@ -56,17 +56,37 @@ static uint8_t sio_reg_read(uint8_t channel, uint8_t reg)
 	return val;
 }
 
-void sio_tx(uint8_t byte)
+void sio_write(uint8_t channel, uint8_t byte)
 {
 	uint8_t rr0;
 
 	do {
-		rr0 = sio_reg_read(0, 0);
+		rr0 = sio_reg_read(channel, 0);
 	} while (!(rr0 & (1 << 2)));
 
-	DATA_A = byte;
+	if (channel) {
+		DATA_B = byte;
+	}
+	else {
+		DATA_A = byte;
+	}
 }
 
+uint8_t sio_read(uint8_t channel)
+{
+	uint8_t rr0;
+
+	do {
+		rr0 = sio_reg_read(channel, 0);
+	} while (!(rr0 & (1 << 0)));
+
+	if (channel) {
+		return DATA_B;
+	}
+	else {
+		return DATA_A;
+	}
+}
 
 void sio_init(void)
 {
