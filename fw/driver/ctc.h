@@ -26,7 +26,7 @@ struct ctc_control {
 	uint8_t reset;
 };
 
-void ctc_control(uint8_t channel, struct ctc_control *control);
+void ctc_control(uint8_t channel, const struct ctc_control *control);
 
 void ctc_init(uint8_t vector);
 

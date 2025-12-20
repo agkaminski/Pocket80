@@ -10,7 +10,7 @@ __sfr __at(0x01) CHAN1;
 __sfr __at(0x02) CHAN2;
 __sfr __at(0x03) CHAN3;
 
-void ctc_control(uint8_t channel, struct ctc_control *control)
+void ctc_control(uint8_t channel, const struct ctc_control *control)
 {
 	uint8_t word = 1;
 
