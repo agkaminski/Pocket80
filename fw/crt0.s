@@ -19,8 +19,7 @@ reset:
 			ld sp, #0xffff
 
 			; Init .bss and .data
-			call bss_init
-			call data_init
+			call gsinit
 
 			; Setup IVT
 			ld a, #0x01 ; 0x0100 >> 8
@@ -61,42 +60,41 @@ ivt:
 .area _BSS
 .area _HEAP
 
-.area _GSINIT
-
 .globl l__DATA
 .globl s__DATA
 .globl l__INITIALIZER
 .globl s__INITIALIZER
 .globl s__INITIALIZED
 
-bss_init:
-			ld bc, #l__DATA ; Length to zero-out
-			ld a, b         ; Check if zero
-			or a, c
-			ret z
-
-			ld hl, #s__DATA ; Start of the .bss
-			ld (hl), #0     ; Zero-out first byte
-			dec bc          ; One byte already done
-			ld a, b         ; Check if zero
-			or a, c
-			ret z
-
-			ld d, h
-			ld e, l
-			inc de
-			ldir            ; Copy first zeroed byte
-
-			ret
-
-data_init:
-			ld bc, #l__INITIALIZER
-			ld a, b         ; Check if zero
-			or a, c
-			ret z
-
+.area   _GSINIT
+gsinit::
+; Default-initialized global variables.
+			ld      bc, #l__DATA
+			ld      a, b
+			or      a, c
+			jr      Z, zeroed_data
+			ld      hl, #s__DATA
+			ld      (hl), #0x00
+			dec     bc
+			ld      a, b
+			or      a, c
+			jr      Z, zeroed_data
+			ld      e, l
+			ld      d, h
+			inc     de
+			ldir
+zeroed_data:
+			; Explicitly initialized global variables.
+			ld	bc, #l__INITIALIZER
+			ld	a, b
+			or	a, c
+			jr	Z, gsinit_next
 			ld	de, #s__INITIALIZED
 			ld	hl, #s__INITIALIZER
 			ldir
 
+gsinit_next:
+
+.area   _GSFINAL
 			ret
+
