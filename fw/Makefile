@@ -14,7 +14,7 @@ LDFLAGS = --code-loc ${CODE} --data-loc ${DATA} --no-std-crt0
 
 SRC = crt0.s
 SRC += main.c
-SRC += driver/ctc.c driver/sio.c driver/dl1414.s
+SRC += driver/interrupt.c driver/ctc.c driver/sio.c driver/dl1414.s
 
 OBJ = $(SRC:.c=.rel)
 OBJ := $(OBJ:.s=.rel)

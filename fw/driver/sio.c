@@ -22,7 +22,7 @@ static void sio_reg_write(uint8_t channel, uint8_t reg, uint8_t val)
 		wr0 = val & 0xF8;
 	}
 
-	// DI();
+	DI();
 	if (channel != 0) {
 		CONTROL_B = wr0;
 		if (reg != 0) {
@@ -35,14 +35,14 @@ static void sio_reg_write(uint8_t channel, uint8_t reg, uint8_t val)
 			CONTROL_A = val;
 		}
 	}
-	// EI();
+	EI();
 }
 
 static uint8_t sio_reg_read(uint8_t channel, uint8_t reg)
 {
 	uint8_t wr0 = reg & 0x3, val;
 
-	// DI();
+	DI();
 	if (channel != 0) {
 		CONTROL_B = wr0;
 		val = CONTROL_B;
@@ -51,7 +51,7 @@ static uint8_t sio_reg_read(uint8_t channel, uint8_t reg)
 		CONTROL_A = wr0;
 		val = CONTROL_A;
 	}
-	// EI();
+	EI();
 
 	return val;
 }

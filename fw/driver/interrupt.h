@@ -2,5 +2,12 @@
  * A.K. 2025
  */
 
-#define DI() __asm di __endasm;
-#define EI() __asm ei __endasm;
+#ifndef DRIVER_INTERRUPT_H_
+#define DRIVER_INTERRUPT_H_
+
+void interrupt_ei(void);
+
+#define DI() __asm di __endasm
+#define EI() interrupt_ei()
+
+#endif
