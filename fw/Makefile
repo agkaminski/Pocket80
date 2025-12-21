@@ -14,10 +14,11 @@ LDFLAGS = --code-loc ${CODE} --data-loc ${DATA} --no-std-crt0
 
 SRC = crt0.s
 SRC += main.c
-SRC += driver/interrupt.c driver/ctc.c driver/sio.c driver/dl1414.s
 
 OBJ = $(SRC:.c=.rel)
 OBJ := $(OBJ:.s=.rel)
+
+LIB := driver/driver.lib
 
 TRASH = *.bin *.lk *.map *.mem *.lst *.rel *.rst *.sym *.asm *.ihx *.noi *.hex
 
@@ -29,8 +30,11 @@ ${TARGET}.bin: ${TARGET}.hex
 	@objcopy -Iihex -Obinary ${TARGET}.hex ${TARGET}.bin
 	du -b ${TARGET}.bin
 
-${TARGET}.hex: ${OBJ}
-	$(CC) -o ${TARGET}.hex ${CFLAGS} ${LDFLAGS} ${OBJ}
+${TARGET}.hex: ${OBJ} ${LIB}
+	$(CC) -o ${TARGET}.hex ${CFLAGS} ${LDFLAGS} ${OBJ} ${LIB}
+
+driver/driver.lib:
+	make -C driver
 
 %.rel: %.c
 	$(CC) ${CFLAGS} -o "$@" -c "$<"
@@ -43,5 +47,4 @@ install: ${TARGET}.bin
 
 clean:
 	@rm -f ${TRASH}
-	@(cd driver && rm -f ${TRASH})
-
+	make -C driver clean
