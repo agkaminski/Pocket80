@@ -8,8 +8,7 @@ CODE = 0x0200
 DATA = 0x8000
 GHASH := "$(shell git describe --always --dirty)"
 DATE := "$(shell date +"%X %x")"
-CFLAGS = -m${CPU} -DVERSION='${GHASH}' -DDATE='${DATE}' \
-  --opt-code-size --max-allocs-per-node 10000
+CFLAGS = -m${CPU} -DVERSION='${GHASH}' -DDATE='${DATE}' --opt-code-size --max-allocs-per-node 10000
 LDFLAGS = --code-loc ${CODE} --data-loc ${DATA} --no-std-crt0
 
 SRC = crt0.s
@@ -18,9 +17,12 @@ SRC += main.c
 OBJ = $(SRC:.c=.rel)
 OBJ := $(OBJ:.s=.rel)
 
-LIB := driver/driver.lib
+LIBPATH := ../lib/
+INCPATH := ../include/
 
-TRASH = *.bin *.lk *.map *.mem *.lst *.rel *.rst *.sym *.asm *.ihx *.noi *.hex
+LIB := driver.lib
+
+CFLAGS += -L${LIBPATH} -I${INCPATH}
 
 .PHONY: clean install
 
@@ -33,18 +35,21 @@ ${TARGET}.bin: ${TARGET}.hex
 ${TARGET}.hex: ${OBJ} ${LIB}
 	$(CC) -o ${TARGET}.hex ${CFLAGS} ${LDFLAGS} ${OBJ} ${LIB}
 
-driver/driver.lib:
-	make -C driver
-
-%.rel: %.c
+%.rel: %.c headers
 	$(CC) ${CFLAGS} -o "$@" -c "$<"
 
 %.rel: %.s
 	$(AS) -l -o -s "$<"
 
+driver.lib:
+	@make --no-print-directory -C ../driver all install
+
+headers:
+	@make --no-print-directory -C ../driver install-headers
+
 install: ${TARGET}.bin
 	minipro -pAT28C256@PLCC32 -sw ${TARGET}.bin
 
 clean:
-	@rm -f ${TRASH}
-	make -C driver clean
+	@rm -f *.bin *.lk *.map *.mem *.lst *.rel *.rst *.sym *.asm *.ihx *.noi *.hex
+	@make --no-print-directory -C ../driver clean

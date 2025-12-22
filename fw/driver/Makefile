@@ -1,6 +1,6 @@
 TARGET = driver
 
-.PHONY: clean
+.PHONY: clean install
 
 CC = $(shell if `which sdcc-sdcc > /dev/null 2>&1`; then echo "sdcc-sdcc"; else echo "sdcc"; fi)
 AS = $(shell if `which sdcc-sdasz80 > /dev/null 2>&1`; then echo "sdcc-sdasz80"; else echo "sdasz80"; fi)
@@ -14,7 +14,10 @@ SRC = interrupt.c ctc.c sio.c dl1414.s
 OBJ = $(SRC:.c=.rel)
 OBJ := $(OBJ:.s=.rel)
 
-all: driver.lib
+LIBPATH := ../lib/
+INCPATH := ../include/
+
+all: ${TARGET}.lib
 
 ${TARGET}.lib: ${OBJ}
 	@$(AR) -q "$@" $^
@@ -25,5 +28,15 @@ ${TARGET}.lib: ${OBJ}
 %.rel: %.s
 	$(AS) -l -o -s "$<"
 
+install: ${TARGET}.lib
+	mkdir -p ${LIBPATH}
+	cp ${TARGET}.lib ${LIBPATH}
+
+install-headers: *.h
+	mkdir -p ${INCPATH}/driver/
+	cp *.h ${INCPATH}/driver/
+
 clean:
 	@rm -f *.lib *.lk *.map *.mem *.lst *.rel *.rst *.sym *.asm *.ihx *.noi *.hex
+	@rm -f ${LIBPATH}/${TARGET}.lib
+	@rm -rf ${INCPATH}/driver
