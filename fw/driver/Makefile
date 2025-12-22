@@ -9,7 +9,7 @@ AR = $(shell if `which sdcc-sdar > /dev/null 2>&1`; then echo "sdcc-sdar"; else 
 CPU = z80
 CFLAGS = -m${CPU} -DVERSION='${GHASH}' --opt-code-size --max-allocs-per-node 10000
 
-SRC = interrupt.c ctc.c sio.c dl1414.s
+SRC = interrupt.c ctc.s sio.c dl1414.s
 
 OBJ = $(SRC:.c=.rel)
 OBJ := $(OBJ:.s=.rel)

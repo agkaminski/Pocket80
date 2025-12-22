@@ -15,7 +15,7 @@ _dl1414_buff: .ds 12
 .area _CODE
 
 .globl _dl1414_update
-_dl1414_update:
+_dl1414_update: ; void dl1414_update(void);
 		ld hl, #_dl1414_buff
 		ld bc, #0x04a3
 		call _dl1414_out
