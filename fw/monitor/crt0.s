@@ -12,7 +12,10 @@
 .z80
 
 .area _HEADER (ABS)
-.org 0x0000
+
+.globl s__CODE
+
+.org 0x8000
 
 reset:
 			; Setup inital stack
@@ -30,7 +33,7 @@ reset:
 			di
 			halt
 
-.org 0x0100
+.org 0x8100
 ivt:
 ; TODO
 
@@ -68,7 +71,7 @@ ivt:
 
 .area   _GSINIT
 gsinit::
-; Default-initialized global variables.
+			; Default-initialized global variables.
 			ld      bc, #l__DATA
 			ld      a, b
 			or      a, c
