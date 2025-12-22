@@ -6,55 +6,12 @@
 
 #include "interrupt.h"
 
-#define SIO_RX_AVAILABLE (1 << 0)
-#define SIO_
-
 __sfr __at(0x20) DATA_A;
 __sfr __at(0x21) DATA_B;
-__sfr __at(0x22) CONTROL_A;
-__sfr __at(0x23) CONTROL_B;
 
-static void sio_reg_write(uint8_t channel, uint8_t reg, uint8_t val)
-{
-	uint8_t wr0 = reg;
+extern void sio_reg_write(uint8_t channel, uint8_t reg, uint8_t val);
 
-	if (reg == 0) {
-		wr0 = val & 0xF8;
-	}
-
-	DI();
-	if (channel != 0) {
-		CONTROL_B = wr0;
-		if (reg != 0) {
-			CONTROL_B = val;
-		}
-	}
-	else {
-		CONTROL_A = wr0;
-		if (reg != 0) {
-			CONTROL_A = val;
-		}
-	}
-	EI();
-}
-
-static uint8_t sio_reg_read(uint8_t channel, uint8_t reg)
-{
-	uint8_t wr0 = reg & 0x3, val;
-
-	DI();
-	if (channel != 0) {
-		CONTROL_B = wr0;
-		val = CONTROL_B;
-	}
-	else {
-		CONTROL_A = wr0;
-		val = CONTROL_A;
-	}
-	EI();
-
-	return val;
-}
+extern uint8_t sio_reg_read(uint8_t channel, uint8_t reg);
 
 void sio_write(uint8_t channel, uint8_t byte)
 {
