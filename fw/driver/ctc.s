@@ -14,11 +14,9 @@
 .globl _ctc_control
 _ctc_control: ; void ctc_control(uint8_t channel, uint16_t ctrl)
 		ld c, a
-		ld a, e
-
 		di
-		out (c), a
-		bit 2, a
+		out (c), e
+		bit 2, e
 		jr z, 1$
 		out (c), d
 1$:		jp _interrupt_ei

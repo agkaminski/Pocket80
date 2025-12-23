@@ -10,6 +10,7 @@
 #define CTC_PRESCALE_16   0
 #define CTC_RELOAD        (1 << 2)
 #define CTC_RESET         (1 << 1)
+#define CTC_CONTROL       (1 << 0)
 
 #include <stdint.h>
 
