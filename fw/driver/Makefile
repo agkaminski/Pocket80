@@ -33,10 +33,10 @@ install: ${TARGET}.lib
 	cp ${TARGET}.lib ${LIBPATH}
 
 install-headers: *.h
-	mkdir -p ${INCPATH}/driver/
-	cp *.h ${INCPATH}/driver/
+	mkdir -p ${INCPATH}/${TARGET}/
+	cp *.h ${INCPATH}/${TARGET}/
 
 clean:
 	@rm -f *.lib *.lk *.map *.mem *.lst *.rel *.rst *.sym *.asm *.ihx *.noi *.hex
 	@rm -f ${LIBPATH}/${TARGET}.lib
-	@rm -rf ${INCPATH}/driver
+	@rm -rf ${INCPATH}/${TARGET}
