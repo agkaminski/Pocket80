@@ -18,6 +18,26 @@
 .org 0x0000
 
 reset:
+			; memtest
+			; fill with 0x55
+			ld bc, #0x7fff
+			ld de, #0x8000
+			ld hl, #0x8001
+			ld a, #0x55
+			ld (0x8000), a
+			ldir
+
+			; check
+			ld hl, #0x8000
+			ld bc, #0x8000
+			cpi
+			jr nz, $1
+			jr v, $1
+
+$1:			dec hl
+
+
+
 			ld sp, #0x0000
 
 			; Init .bss and .data
@@ -29,6 +49,11 @@ reset:
 			ld i, a
 
 			call _main
+			; Fall through
+irq_bad:
+			di
+			halt
+			jr irq_bad
 
 .globl _sio_irq_tx_empty
 .globl _sio_irq_rx_avail
@@ -36,8 +61,10 @@ reset:
 
 .macro SAVE
 			di
-			ex af, af'
-			exx
+			push af
+			push bc
+			push de
+			push hl
 			push ix
 			push iy
 .endm
@@ -45,8 +72,10 @@ reset:
 .macro RESTORE
 			pop iy
 			pop ix
-			exx
-			ex af, af'
+			pop hl
+			pop de
+			pop bc
+			pop af
 			ei
 			reti
 .endm
@@ -55,42 +84,47 @@ __sio_irq_a_tx_empty:
 			SAVE
 			ld a, #0
 			call _sio_irq_tx_empty
-			RESTORE
+			jr irq_restore
 
 __sio_irq_a_rx_avail:
 			SAVE
 			ld a, #0
 			call _sio_irq_rx_avail
-			RESTORE
+			jr irq_restore
 
 __sio_irq_a_special:
 			SAVE
 			ld a, #0
 			call _sio_irq_special
-			RESTORE
+			jr irq_restore
 
 __sio_irq_b_tx_empty:
 			SAVE
 			ld a, #1
 			call _sio_irq_tx_empty
-			RESTORE
+			jr irq_restore
 
 __sio_irq_b_rx_avail:
 			SAVE
 			ld a, #1
 			call _sio_irq_rx_avail
-			RESTORE
+			jr irq_restore
 
 __sio_irq_b_special:
 			SAVE
 			ld a, #1
 			call _sio_irq_special
-			RESTORE
+			jr irq_restore
 
-irq_bad:
-			di
-			halt
-			jr irq_bad
+irq_restore:
+			pop iy
+			pop ix
+			pop hl
+			pop de
+			pop bc
+			pop af
+			ei
+			reti
 
 .org 0x0100
 

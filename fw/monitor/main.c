@@ -36,25 +36,19 @@ int main(void)
 	/* Baud generator */
 	_ctc_control(1, CTC_PRESCALE_16 | CTC_RELOAD | CTC_CONTROL | (1 << 8));
 
-	dlprint("SIO INIT");
-
 	sio_init(0x00);
 
 	EI();
 
 	beep();
 
-	dlprint("IRQ ENABLED");
-
-	sio_write(0, welcome_msg, sizeof(welcome_msg) - 1);
-	sio_write(0, "\r\n", 2);
-
-	dlprint("AFTER TX");
+	for (;;) {
+		sio_write(0, welcome_msg, sizeof(welcome_msg) - 1);
+		sio_write(0, "\r\n", 2);
+	}
 
 	for (;;) {
 		uint8_t data;
-
-		dlprint("LOOPING");
 
 		sio_read(0, &data, 1);
 		sio_write(0, &data, 1);

@@ -9,21 +9,16 @@
 
 .area _CODE
 
-.globl _sio_reg_write
-_sio_reg_write: ; void sio_reg_write(uint8_t channel, uint8_t reg, uint8_t val)
+.globl __sio_reg_write
+__sio_reg_write: ; void sio_reg_write(uint8_t channel, uint16_t regval)
 		add a, #0x22
 		ld c, a
-		ld a, l
-
-		pop hl
-		pop de
-		dec sp
-		push hl
+		ld a, e
 
 		or a, a
 		jr z, $1
 		out (c), a
-$1:		out (c), e
+$1:		out (c), d
 		ret
 
 

@@ -7,7 +7,7 @@ CPU = z80
 
 
 CODE = 0x0200
-DATA = 0xC000
+DATA = 0x8000
 GHASH := "$(shell git describe --always --dirty)"
 DATE := "$(shell date +"%X %x")"
 CFLAGS = -m${CPU} -DVERSION='${GHASH}' -DDATE='${DATE}' --opt-code-size --max-allocs-per-node 10000
@@ -50,7 +50,7 @@ headers:
 	@make --no-print-directory -C ../driver install-headers
 
 install: ${TARGET}.bin
-	minipro -pAT28C256@PLCC32 -sw ${TARGET}.bin
+	minipro -pAT28C256@PLCC32 -suPw ${TARGET}.bin
 
 clean:
 	@rm -f *.bin *.lk *.map *.mem *.lst *.rel *.rst *.sym *.asm *.ihx *.noi *.hex
