@@ -15,29 +15,27 @@
 
 .globl s__CODE
 
-.org 0x8000
+.org 0x0000
 
 reset:
-			; Setup inital stack
-			ld sp, #0xffff
+			ld sp, #0x0000
 
 			; Init .bss and .data
 			call gsinit
 
-			; Setup IVT
+			; Setup interrupts
+			im 2
 			ld a, #0x01 ; 0x0100 >> 8
 			ld i, a
 
 			call _main
 
-			di
-			halt
-
-.org 0x8100
-ivt:
-; TODO
+.globl _sio_irq_tx_empty
+.globl _sio_irq_rx_avail
+.globl _sio_irq_special
 
 .macro SAVE
+			di
 			ex af, af'
 			exx
 			push ix
@@ -49,7 +47,203 @@ ivt:
 			pop ix
 			exx
 			ex af, af'
+			ei
+			reti
 .endm
+
+__sio_irq_a_tx_empty:
+			SAVE
+			ld a, #0
+			call _sio_irq_tx_empty
+			RESTORE
+
+__sio_irq_a_rx_avail:
+			SAVE
+			ld a, #0
+			call _sio_irq_rx_avail
+			RESTORE
+
+__sio_irq_a_special:
+			SAVE
+			ld a, #0
+			call _sio_irq_special
+			RESTORE
+
+__sio_irq_b_tx_empty:
+			SAVE
+			ld a, #1
+			call _sio_irq_tx_empty
+			RESTORE
+
+__sio_irq_b_rx_avail:
+			SAVE
+			ld a, #1
+			call _sio_irq_rx_avail
+			RESTORE
+
+__sio_irq_b_special:
+			SAVE
+			ld a, #1
+			call _sio_irq_special
+			RESTORE
+
+irq_bad:
+			di
+			halt
+			jr irq_bad
+
+.org 0x0100
+
+ivt:
+
+; SIO
+
+; Channel B
+.word __sio_irq_b_tx_empty
+.word irq_bad
+.word __sio_irq_b_rx_avail
+.word __sio_irq_b_special
+
+; Channel A
+.word __sio_irq_a_tx_empty
+.word irq_bad
+.word __sio_irq_a_rx_avail
+.word __sio_irq_a_special
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
+.word irq_bad
 
 .area _HOME
 .area _CODE

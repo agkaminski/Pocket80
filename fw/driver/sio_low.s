@@ -7,8 +7,6 @@
 
 .z80
 
-.globl _interrupt_ei
-
 .area _CODE
 
 .globl _sio_reg_write
@@ -22,22 +20,33 @@ _sio_reg_write: ; void sio_reg_write(uint8_t channel, uint8_t reg, uint8_t val)
 		dec sp
 		push hl
 
-		di
 		or a, a
 		jr z, $1
 		out (c), a
 $1:		out (c), e
-		jp _interrupt_ei
+		ret
 
 
 .globl _sio_reg_read
 _sio_reg_read: ; uint8_t sio_reg_read(uint8_t channel, uint8_t reg)
 		add a, #0x22
 		ld c, a
-		di
 		out (c), l
 		in a, (c)
-		push af
-		call _interrupt_ei
-		pop af
+		ret
+
+
+.globl _sio_data_write
+_sio_data_write: ; void sio_data_write(uint8_t channel, uint8_t data)
+		add a, #0x20
+		ld c, a
+		out (c), l
+		ret
+
+
+.globl _sio_data_read
+_sio_data_read: ; uint8_t sio_data_read(uint8_t channel)
+		add a, #0x20
+		ld c, a
+		in a, (c)
 		ret

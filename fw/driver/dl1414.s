@@ -24,8 +24,7 @@ _dl1414_update: ; void dl1414_update(void);
 		ld bc, #0x04e3
 _dl1414_out:
 		outi
-		jr z, _dl1414_out_e
+		jr z, 1$
 		dec c
 		jr _dl1414_out
-_dl1414_out_e:
-		ret
+1$:		ret

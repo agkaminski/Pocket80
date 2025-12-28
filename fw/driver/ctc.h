@@ -16,6 +16,7 @@
 
 /* Preload value is on MSB byte of ctrl */
 void ctc_control(uint8_t channel, uint16_t ctrl);
+void _ctc_control(uint8_t channel, uint16_t ctrl);
 
 void ctc_init(uint8_t vector);
 

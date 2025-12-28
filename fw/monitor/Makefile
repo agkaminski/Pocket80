@@ -6,7 +6,7 @@ AS = $(shell if `which sdcc-sdasz80 > /dev/null 2>&1`; then echo "sdcc-sdasz80";
 CPU = z80
 
 
-CODE = 0x8200
+CODE = 0x0200
 DATA = 0xC000
 GHASH := "$(shell git describe --always --dirty)"
 DATE := "$(shell date +"%X %x")"
