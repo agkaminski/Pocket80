@@ -6,7 +6,7 @@
 	(paper "A5")
 	(title_block
 		(title "Z80 CTC")
-		(date "2025-12-17")
+		(date "2025-12-28")
 		(rev "C")
 		(company "A.K.")
 	)
